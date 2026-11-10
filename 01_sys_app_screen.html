@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Starter Page | Admin &amp; Dashboard Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="Premium Multipurpose Admin &amp; Dashboard Template" name="description">
+        <meta content="Themesbrand" name="author" />
+        <!-- App favicon -->
+        <link href="assets/images/favicon.ico" rel="shortcut icon" />
+        <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/libs/@chenfengyuan/datepicker/datepicker.min.css" rel="stylesheet" />
+        <!-- DataTables -->
+        <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <!-- Responsive datatable examples -->
+        <link href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet">
+        <!-- Bootstrap Css -->
+        <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+        <!-- Icons Css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body data-sidebar="light">
+
+        <div id="layout-wrapper">
+
+            <header id="page-topbar">
+                <div class="navbar-header">
+
+                    <div class="d-flex">
+                        
+                        <div class="navbar-brand-box">
+                            <a class="logo logo-dark" href="#">
+                                <span class="logo-sm"><img alt="" height="22" src="assets/images/logo.svg" /></span>
+                                <span class="logo-lg"><img alt="" height="17" src="assets/images/logo-dark.png" /></span>
+                            </a>
+                            <a class="logo logo-light" href="#">
+                                <span class="logo-sm"><img alt="" height="22" src="assets/images/logo-light.svg" /></span>
+                                <span class="logo-lg"><img alt="" height="19" src="assets/images/logo-light.png" /></span>
+                            </a>
+                        </div>
+                        
+                        <button class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn" type="button">
+                            <i class="fa fa-fw fa-bars"></i>
+                        </button>
+
+                        <div class="dropdown d-inline-block">
+                            <button aria-expanded="false" aria-haspopup="true" class="btn header-item waves-effect" data-bs-toggle="dropdown" id="page-header-user-dropdown" type="button">
+                                <span class="d-none d-xl-inline-block ms-1" key="t-StarCode Kh">StarCode Kh</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item" href="#">
+                                    <i class="bx bx-user font-size-16 align-middle me-1"></i>
+                                    <span key="t-profile">Profile</span>
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bx bx-wallet font-size-16 align-middle me-1"></i>
+                                    <span key="t-my-wallet">My Wallet</span>
+                                </a>
+                                <a class="dropdown-item d-block" href="#">
+                                    <span class="badge bg-success float-end">11</span>
+                                    <i class="bx bx-wrench font-size-16 align-middle me-1"></i>
+                                    <span key="t-settings">Settings</span>
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bx bx-lock-open font-size-16 align-middle me-1"></i>
+                                    <span key="t-lock-screen">Lock screen</span>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-danger" href="#">
+                                    <i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i>
+                                    <span key="t-logout">Logout</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex">
+                        
+                        <div class="dropdown d-inline-block d-lg-none ms-2">
+                            <button aria-expanded="false" aria-haspopup="true" class="btn header-item noti-icon waves-effect" data-bs-toggle="dropdown" id="page-header-search-dropdown" type="button">
+                                <i class="mdi mdi-magnify"></i>
+                            </button>
+                            <div aria-labelledby="page-header-search-dropdown" class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0">
+                                <form class="p-3">
+                                    <div class="form-group m-0">
+                                        <div class="input-group">
+                                            <input aria-label="Recipient's username" class="form-control" placeholder="Search ..." type="text" />
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary" type="submit">
+                                                    <i class="mdi mdi-magnify"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <div class="dropdown d-inline-block">
+                            <button aria-expanded="false" aria-haspopup="true" class="btn header-item waves-effect" data-bs-toggle="dropdown" type="button">
+                                <img alt="Header Language" height="16" id="header-lang-img" src="assets/images/flags/us.jpg" />
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item notify-item language" data-lang="en" href="javascript:void(0);">
+                                    <img alt="user-image" class="me-1" height="12" src="assets/images/flags/us.jpg" />
+                                    <span class="align-middle">English</span>
+                                </a>
+                                <a class="dropdown-item notify-item language" data-lang="sp" href="javascript:void(0);">
+                                    <img alt="user-image" class="me-1" height="12" src="assets/images/flags/spain.jpg" />
+                                    <span class="align-middle">Spanish</span>
+                                </a>
+                                <a class="dropdown-item notify-item language" data-lang="gr" href="javascript:void(0);">
+                                    <img alt="user-image" class="me-1" height="12" src="assets/images/flags/germany.jpg" />
+                                    <span class="align-middle">German</span>
+                                </a>
+                                <a class="dropdown-item notify-item language" data-lang="it" href="javascript:void(0);">
+                                    <img alt="user-image" class="me-1" height="12" src="assets/images/flags/italy.jpg" />
+                                    <span class="align-middle">Italian</span>
+                                </a>
+                                <a class="dropdown-item notify-item language" data-lang="ru" href="javascript:void(0);">
+                                    <img alt="user-image" class="me-1" height="12" src="assets/images/flags/russia.jpg" />
+                                    <span class="align-middle">Russian</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="dropdown d-none d-lg-inline-block ms-1">
+                            <button aria-expanded="false" aria-haspopup="true" class="btn header-item noti-icon waves-effect" data-bs-toggle="dropdown" type="button">
+                                <i class="bx bx-customize"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+                                <div class="px-lg-2">
+                                    <div class="row g-0">
+                                        <div class="col">
+                                            <a class="dropdown-icon-item" href="#">
+                                                <img alt="Github" src="assets/images/brands/github.png" />
+                                                <span>GitHub</span>
+                                            </a>
+                                        </div>
+                                        <div class="col">
+                                            <a class="dropdown-icon-item" href="#">
+                                                <img alt="bitbucket" src="assets/images/brands/bitbucket.png" />
+                                                <span>Bitbucket</span>
+                                            </a>
+                                        </div>
+                                        <div class="col">
+                                            <a class="dropdown-icon-item" href="#">
+                                                <img alt="dribbble" src="assets/images/brands/dribbble.png" />
+                                                <span>Dribbble</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row g-0">
+                                        <div class="col">
+                                            <a class="dropdown-icon-item" href="#">
+                                                <img alt="dropbox" src="assets/images/brands/dropbox.png" />
+                                                <span>Dropbox</span>
+                                            </a>
+                                        </div>
+                                        <div class="col">
+                                            <a class="dropdown-icon-item" href="#">
+                                                <img alt="mail_chimp" src="assets/images/brands/mail_chimp.png" />
+                                                <span>Mail Chimp</span>
+                                            </a>
+                                        </div>
+                                        <div class="col">
+                                            <a class="dropdown-icon-item" href="#">
+                                                <img alt="slack" src="assets/images/brands/slack.png" />
+                                                <span>Slack</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown d-inline-block">
+                            <button aria-expanded="false" aria-haspopup="true" class="btn header-item waves-effect" data-bs-toggle="dropdown" id="page-header-user-dropdown" type="button">
+                                <span class="d-none d-xl-inline-block ms-1" key="t-StarCode Kh">StarCode Kh</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item" href="#">
+                                    <span key="t-profile-my-profile">My Profile</span>
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <span key="t-profile-password-change">Password Change</span>
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <span key="t-profile-setting">Settings</span>
+                                </a>
+                                <div class="dropdown-divider my-2"></div>
+                                <a class="dropdown-item text-danger" href="#">
+                                    <span key="t-profile-signoff">Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </header>
+            
+            <div class="vertical-menu">
+                <div class="h-100" data-simplebar="">
+                    <div id="sidebar-menu">
+                        <ul class="metismenu list-unstyled" id="side-menu">
+                            
+                            <li>
+                                <a class="has-arrow waves-effect py-1" href="javascript: void(0);">
+                                    <i class="bx bx-home-circle"></i>
+                                    <span key="t-dashboards">Dashboards</span>
+                                </a>
+                                <ul aria-expanded="false" class="sub-menu">
+                                    <li><a class="py-1" href="javascript: void(0);" key="t-dashboards-1">Dashboards 1</a></li>
+                                    <li><a class="py-1" href="javascript: void(0);" key="t-dashboards-2">Dashboards 2</a></li>
+                                    <li><a class="py-1" href="javascript: void(0);" key="t-dashboards-3">Dashboards 3</a></li>
+                                    <li><a class="py-1" href="javascript: void(0);" key="t-dashboards-4">Dashboards 4</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a class="has-arrow waves-effect py-1" href="javascript: void(0);">
+                                    <i class="bx bx-home-circle"></i>
+                                    <span key="t-dashboards">System Administrator</span>
+                                </a>
+                                <ul aria-expanded="false" class="sub-menu">
+                                    <li><a class="py-1" href="javascript: void(0);" key="t-system-administrator-application-module">Application Module</a></li>
+                                    <li><a class="py-1" href="javascript: void(0);" key="t-system-administrator-application-screen">Application Screen</a></li>
+                                    <li><a class="py-1" href="javascript: void(0);" key="t-system-administrator-user-privilege">User Privilege</a></li>
+                                    <li><a class="py-1" href="javascript: void(0);" key="t-system-administrator-user-maintenance">User Maintenance</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a class="has-arrow waves-effect py-1" href="javascript: void(0);">
+                                    <i class="bx bx-layout"></i>
+                                    <span key="t-layouts">Layouts</span>
+                                </a>
+                                <ul aria-expanded="true" class="sub-menu">
+                                    <li>
+                                        <a class="has-arrow py-1" href="javascript: void(0);" key="t-vertical">Menu 1</a>
+                                        <ul aria-expanded="true" class="sub-menu">
+                                            <li><a class="py-1" href="javascript: void(0);" key="t-menu-1">Level 1</a></li>
+                                            <li><a class="py-1" href="javascript: void(0);" key="t-menu-2">Level 2</a></li>
+                                            <li><a class="py-1" href="javascript: void(0);" key="t-menu-3">Level 3</a></li>
+                                            <li><a class="py-1" href="javascript: void(0);" key="t-menu-4">Level 4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="has-arrow py-1" href="javascript: void(0);" key="t-horizontal">Menu 2</a>
+                                        <ul aria-expanded="true" class="sub-menu">
+                                            <li><a class="py-1" href="javascript: void(0);" key="t-menu-1">Level 1</a></li>
+                                            <li><a class="py-1" href="javascript: void(0);" key="t-menu-2">Level 2</a></li>
+                                            <li><a class="py-1" href="javascript: void(0);" key="t-menu-3">Level 3</a></li>
+                                            <li><a class="py-1" href="javascript: void(0);" key="t-menu-4">Level 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                <a class="waves-effect py-1" href="javascript: void(0);" key="t-menu-1">
+                                    <i class="bx bx-file"></i>
+                                    <span key="t-">Level 1</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                    <h4 class="mb-sm-0 font-size-18">System Application Screen</h4>
+                                    <div class="page-title-right">
+                                        <a role="button" class="btn btn-sm btn-primary w-sm waves-effect btn-label waves-light" data-bs-target="#form-addnew" data-bs-toggle="offcanvas">
+                                            <i class="label-icon font-size-12 fas fa-plus"></i>
+                                            Add New
+                                        </a>
+                                        <a role="button" class="btn btn-sm btn-primary w-sm waves-effect btn-label waves-light" data-bs-target="#form-filter" data-bs-toggle="offcanvas">
+                                            <i class="label-icon font-size-12 fas fa-filter"></i>
+                                            Filter
+                                        </a>
+                                        <a role="button" class="btn btn-sm btn-primary w-sm waves-effect btn-label waves-light">
+                                            <i class="label-icon font-size-12 fas fa-life-ring"></i>
+                                            Get Help
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="px-1 col-md-12">
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <table id="dt-listing1" class="table table-bordered table-striped dt-responsive nowrap w-100">
+                                            <thead>
+                                                <tr>
+                                                    <th class="py-1 bg-primary text-white col-4">Module Name</th>
+                                                    <th class="py-1 bg-primary text-white col-7">Screen Name</th>
+                                                    <th class="py-1 bg-primary text-white col-1 text-center">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="py-1">Tiger Nixon</td>
+                                                    <td class="py-1">Tiger Nixon</td>
+                                                    <td class="py-1 text-center">
+                                                        <div class="dropdown">
+                                                            <a class="waves-effect waves-light" data-bs-toggle="dropdown">
+                                                                <i class="label-icon fas fa-ellipsis-h"></i>
+                                                            </a>
+                                                            <div class="dropdown-menu shadow">
+                                                                <a class="dropdown-item" href="javascript: void(0);" role="button" data-bs-target="#form-view" data-bs-toggle="offcanvas">View</a>
+                                                                <a class="dropdown-item" href="javascript: void(0);" role="button" data-bs-target="#form-edit" data-bs-toggle="offcanvas">Edit</a>
+                                                                <div class="dropdown-divider my-2"></div>
+                                                                <a class="dropdown-item" href="javascript: void(0);" role="button" data-bs-target="#form-authorize" data-bs-toggle="offcanvas">Authorize</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        
+                        <div class="offcanvas offcanvas-end h-100" id="form-filter" tabindex="-1">
+    
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title">Filter Record</h5>
+                            </div>
+
+                            <div class="offcanvas-body">
+                                
+                                <div class="mb-2 row">
+                                    <label class="px-1 col-md-4 col-form-label py-1">Module Name</label>
+                                    <div class="px-1 col-md-8">
+                                        <select class="form-select form-select-sm">
+                                            <option>Select</option>
+                                            <option>Large select</option>
+                                            <option>Small select</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-2 row">
+                                    <label class="px-1 col-md-4 col-form-label py-1">Screen Name</label>
+                                    <div class="px-1 col-md-8">
+                                        <input class="form-control form-control-sm" />
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-2 row">
+                                    <label class="px-1 col-md-4 col-form-label py-1">Permission</label>
+                                    <div class="px-1 col-md-8">
+                                        <input class="form-control form-control-sm" />
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="offcanvas-footer p-3 bg-light border-top">
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <a href="javascript: void(0);" class="btn btn-sm btn-primary w-sm waves-effect btn-label waves-light" data-bs-dismiss="offcanvas">
+                                        <i class="label-icon font-size-12 fas fa-check"></i>
+                                        Submit
+                                    </a>
+                                    <a href="javascript: void(0);" class="btn btn-sm btn-primary w-sm waves-effect btn-label waves-light" data-bs-dismiss="offcanvas">
+                                        <i class="label-icon font-size-12 fas fa-caret-down"></i>
+                                        Close
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="offcanvas offcanvas-end h-100" id="form-addnew" tabindex="-1">
+    
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title">Add Record</h5>
+                            </div>
+
+                            <div class="offcanvas-body">
+                                
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link py-1 text-center active" data-bs-toggle="tab" href="#tab-addnew-master" role="tab" aria-selected="true">
+                                            <span class="d-none d-sm-block">Master</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link py-1 text-center" data-bs-toggle="tab" href="#tab-addnew-audit" role="tab" aria-selected="false" tabindex="-1">
+                                            <span class="d-none d-sm-block">Audit</span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="tab-content p-2 text-muted">
+
+                                    <div role="tabpanel" id="tab-addnew-master" class="tab-pane py-2 active show">
+                                        
+                                        <div class="mb-2 row">
+                                            <label class="px-1 col-md-4 col-form-label py-1">Module Name</label>
+                                            <div class="px-1 col-md-8">
+                                                <select class="form-select form-select-sm">
+                                                    <option>Select</option>
+                                                    <option>Large select</option>
+                                                    <option>Small select</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-2 row">
+                                            <label class="px-1 col-md-4 col-form-label py-1">Screen Name</label>
+                                            <div class="px-1 col-md-8">
+                                                <input class="form-control form-control-sm" />
+                                            </div>
+                                        </div>
+
+                                        <form class="outer-repeater">
+                                            <div class="outer" data-repeater-list="outer-group">
+                                                <div class="outer" data-repeater-item="">
+                                                    <div class="inner-repeater mb-4">
+
+                                                        <div class="inner mb-3" data-repeater-list="inner-group">
+                                                            <div class="inner mb-2 row" data-repeater-item="">
+                                                                <label class="px-1 col-md-4 col-form-label py-1">Permission</label>
+                                                                <div class="px-1 col-md-7">
+                                                                    <input class="form-control form-control-sm" />
+                                                                </div>
+                                                                <div class="px-1 col-md-1">
+                                                                    <button class="btn btn-sm btn-primary" data-repeater-delete="" type="button">
+                                                                        <i class="fas fa-times"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <button class="btn btn-sm btn-primary w-sm" data-repeater-create="" type="button">
+                                                            Add Permission
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                    
+                                    <div role="tabpanel" class="tab-pane py-2" id="tab-addnew-audit"></div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="offcanvas-footer p-3 bg-light border-top">
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <a href="javascript: void(0);" class="btn btn-sm btn-primary w-sm waves-effect btn-label waves-light" data-bs-dismiss="offcanvas">
+                                        <i class="label-icon font-size-12 fas fa-check"></i>
+                                        Submit
+                                    </a>
+                                    <a href="javascript: void(0);" class="btn btn-sm btn-primary w-sm waves-effect btn-label waves-light" data-bs-dismiss="offcanvas">
+                                        <i class="label-icon font-size-12 fas fa-caret-down"></i>
+                                        Close
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="offcanvas offcanvas-end h-100" id="form-edit" tabindex="-1">
+    
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title">Edit Record</h5>
+                            </div>
+
+                            <div class="offcanvas-body">
+                                
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link py-1 text-center active" data-bs-toggle="tab" href="#tab-edit-master" role="tab" aria-selected="true">
+                                            <span class="d-none d-sm-block">Master</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link py-1 text-center" data-bs-toggle="tab" href="#tab-edit-audit" role="tab" aria-selected="false" tabindex="-1">
+                                            <span class="d-none d-sm-block">Audit</span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="tab-content p-2 text-muted">
+
+                                    <div role="tabpanel" id="tab-edit-master" class="tab-pane py-2 active show">
+                                        
+                                        <div class="mb-2 row">
+                                            <label class="px-1 col-md-4 col-form-label py-1">Module Name</label>
+                                            <div class="px-1 col-md-8">
+                                                <select class="form-select form-select-sm">
+                                                    <option>Select</option>
+                                                    <option>Large select</option>
+                                                    <option>Small select</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-2 row">
+                                            <label class="px-1 col-md-4 col-form-label py-1">Screen Name</label>
+                                            <div class="px-1 col-md-8">
+                                                <input class="form-control form-control-sm" />
+                                            </div>
+                                        </div>
+
+                                        <form class="outer-repeater">
+                                            <div class="outer" data-repeater-list="outer-group">
+                                                <div class="outer" data-repeater-item="">
+                                                    <div class="inner-repeater mb-4">
+
+                                                        <div class="inner mb-3" data-repeater-list="inner-group">
+                                                            <div class="inner mb-2 row" data-repeater-item="">
+                                                                <label class="px-1 col-md-4 col-form-label py-1">Permission</label>
+                                                                <div class="px-1 col-md-7">
+                                                                    <input class="form-control form-control-sm" />
+                                                                </div>
+                                                                <div class="px-1 col-md-1">
+                                                                    <button class="btn btn-sm btn-primary" data-repeater-delete="" type="button">
+                                                                        <i class="fas fa-times"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <button class="btn btn-sm btn-primary w-sm" data-repeater-create="" type="button">
+                                                            Add Permission
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                    
+                                    <div role="tabpanel" class="tab-pane py-2" id="tab-edit-audit"></div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="offcanvas-footer p-3 bg-light border-top">
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <a href="javascript: void(0);" class="btn btn-sm btn-primary w-sm waves-effect btn-label waves-light" data-bs-dismiss="offcanvas">
+                                        <i class="label-icon font-size-12 fas fa-check"></i>
+                                        Submit
+                                    </a>
+                                    <a href="javascript: void(0);" class="btn btn-sm btn-primary w-sm waves-effect btn-label waves-light" data-bs-dismiss="offcanvas">
+                                        <i class="label-icon font-size-12 fas fa-caret-down"></i>
+                                        Close
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="offcanvas offcanvas-end h-100" id="form-view" tabindex="-1">
+    
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title">View Record</h5>
+                            </div>
+
+                            <div class="offcanvas-body">
+                                
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link py-1 text-center active" data-bs-toggle="tab" href="#tab-view-master" role="tab" aria-selected="true">
+                                            <span class="d-none d-sm-block">Master</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link py-1 text-center" data-bs-toggle="tab" href="#tab-view-audit" role="tab" aria-selected="false" tabindex="-1">
+                                            <span class="d-none d-sm-block">Audit</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link py-1 text-center" data-bs-toggle="tab" href="#tab-view-changes" role="tab" aria-selected="false" tabindex="-1">
+                                            <span class="d-none d-sm-block">Changes</span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="tab-content p-2 text-muted">
+
+                                    <div role="tabpanel" id="tab-view-master" class="tab-pane py-2 active show">
+                                        
+                                        <div class="mb-2 row">
+                                            <label class="px-1 col-md-4 col-form-label py-1">Module Name</label>
+                                            <div class="px-1 col-md-8">
+                                                <input class="form-control form-control-sm" readonly disabled />
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-2 row">
+                                            <label class="px-1 col-md-4 col-form-label py-1">Screen Name</label>
+                                            <div class="px-1 col-md-8">
+                                                <input class="form-control form-control-sm" readonly disabled />
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    
+                                    <div role="tabpanel" class="tab-pane py-2" id="tab-view-audit"></div>
+
+                                    <div role="tabpanel" class="tab-pane py-2" id="tab-view-changes"></div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="offcanvas-footer p-3 bg-light border-top">
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <a href="javascript: void(0);" class="btn btn-sm btn-primary w-sm waves-effect btn-label waves-light" data-bs-dismiss="offcanvas">
+                                        <i class="label-icon font-size-12 fas fa-caret-down"></i>
+                                        Close
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="offcanvas offcanvas-end h-100" id="form-authorize" tabindex="-1">
+    
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title">Authorize Record</h5>
+                            </div>
+
+                            <div class="offcanvas-body">
+                                
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link py-1 text-center active" data-bs-toggle="tab" href="#tab-authorize-master" role="tab" aria-selected="true">
+                                            <span class="d-none d-sm-block">Master</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link py-1 text-center" data-bs-toggle="tab" href="#tab-authorize-audit" role="tab" aria-selected="false" tabindex="-1">
+                                            <span class="d-none d-sm-block">Audit</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link py-1 text-center" data-bs-toggle="tab" href="#tab-authorize-changes" role="tab" aria-selected="false" tabindex="-1">
+                                            <span class="d-none d-sm-block">Changes</span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="tab-content p-2 text-muted">
+
+                                    <div role="tabpanel" id="tab-authorize-master" class="tab-pane py-2 active show">
+                                        
+                                        <div class="mb-2 row">
+                                            <label class="px-1 col-md-4 col-form-label py-1">Module Name</label>
+                                            <div class="px-1 col-md-8">
+                                                <input class="form-control form-control-sm" readonly disabled />
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-2 row">
+                                            <label class="px-1 col-md-4 col-form-label py-1">Screen Name</label>
+                                            <div class="px-1 col-md-8">
+                                                <input class="form-control form-control-sm" readonly disabled />
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    
+                                    <div role="tabpanel" class="tab-pane py-2" id="tab-authorize-audit"></div>
+
+                                    <div role="tabpanel" class="tab-pane py-2" id="tab-authorize-changes"></div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="offcanvas-footer p-3 bg-light border-top">
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <a href="javascript: void(0);" class="btn btn-sm btn-primary w-sm waves-effect btn-label waves-light" data-bs-dismiss="offcanvas">
+                                        <i class="label-icon font-size-12 fas fa-check"></i>
+                                        Approve
+                                    </a>
+                                    <a href="javascript: void(0);" class="btn btn-sm btn-danger w-sm waves-effect btn-label waves-light" data-bs-dismiss="offcanvas">
+                                        <i class="label-icon font-size-12 fas fa-times"></i>
+                                        Delete
+                                    </a>
+                                    <a href="javascript: void(0);" class="btn btn-sm btn-primary w-sm waves-effect btn-label waves-light" data-bs-dismiss="offcanvas">
+                                        <i class="label-icon font-size-12 fas fa-caret-down"></i>
+                                        Close
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+        
+        <div class="rightbar-overlay"></div>
+        
+        <!-- JAVASCRIPT -->
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/node-waves/waves.min.js"></script>
+        
+        <script src="assets/libs/select2/js/select2.min.js"></script>
+        <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+        <script src="assets/libs/spectrum-colorpicker2/spectrum.min.js"></script>
+        <script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+        <script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+        <script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+        <script src="assets/libs/@chenfengyuan/datepicker/datepicker.min.js"></script>
+
+        <!-- Required datatable js -->
+        <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <!-- Buttons examples -->
+        <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+        <script src="assets/libs/jszip/jszip.min.js"></script>
+        <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+        <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+        <!-- Responsive examples -->
+        <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+        
+        <!-- form repeater js -->
+        <script src="assets/libs/jquery.repeater/jquery.repeater.min.js"></script>
+        <script src="assets/js/pages/form-repeater.int.js"></script>
+
+        <script>
+
+            $(document).ready(function () {
+                
+                $("#dt-listing1").DataTable({
+                    ordering: !1,
+                    lengthChange: !1,
+                });
+
+            });
+
+            function load_filter() {}
+            
+            function load_help() {}
+
+            function load_view(recid) {}
+            
+            function load_edit(recid) {}
+            
+            function load_authorize(recid) {}
+            
+            function submit_filter() {}
+
+            function submit_addnew() {}
+            
+            function submit_edit(recid) {}
+            
+            function submit_approve(recid) {}
+            
+            function submit_delete(recid) {}
+
+        </script>
+
+        <script src="assets/js/app.js"></script>
+
+    </body>
+
+</html>
